@@ -1,0 +1,32 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)">
+    <mat-toolbar>Contacts</mat-toolbar>
+    <div *ngIf="users">
+    <mat-nav-list  *ngFor="let user of users">
+      <a mat-list-item (click)="sendUser(user)" routerLink="user/{{user.name.last}}"><span matBadge="{{user.vote}}" matBadgeOverlap="false"></span><span style="margin-left:30px"> {{user.name.last}}</span></a>
+      <!-- <a mat-list-item routerLink="user/:2">Link 2</a>
+      <a mat-list-item routerLink="user/:3">Link 3</a> -->
+     
+    </mat-nav-list>
+  </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Angular 7 Dashboard</span>
+    </mat-toolbar>
+    <!-- <app-start></app-start> -->
+    <router-outlet ></router-outlet>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

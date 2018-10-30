@@ -1,0 +1,44 @@
+<div *ngIf="!user"class="center">Choose User</div>
+<div *ngIf="user" class="wrapper">
+
+
+
+
+
+<mat-card class="example-card">
+  <mat-card-header>
+  
+    <!-- <div mat-card-avatar class="example-header-image" style="background:url({{image}}) cover;"></div> -->
+    <div class="image-wrapper">
+    <img class="image-contact" [src]="image">
+    </div>
+  
+    <!-- <mat-card-title>Shiba Inu</mat-card-title> -->
+    <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+  </mat-card-header>
+  <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+  <mat-card-content>
+    <div class="center">{{showheader}}</div>
+    <div class="center-main">{{show}}</div>
+    <div class="wrapper-icons ">
+      <span (mouseover)="changeText('usericon')" ><i  [ngClass]="{'my-class': usericon==true}"class="icon_sp far fa-user fa-3x"></i></span>
+      <span (mouseover)="changeText('mailicon')"><i class="icon_sp far fa-envelope fa-3x" [ngClass]="{'my-class': mailicon}"></i></span>
+      <span (mouseover)="changeText('listicon')"><i class="icon_sp far fa-list-alt fa-3x"[ngClass]="{'my-class': listicon}"></i></span>
+      <span (mouseover)="changeText('mapicon')"><i class="icon_sp fas fa-map-marked-alt fa-3x"[ngClass]="{'my-class': mapicon}"></i></span>
+      <span (mouseover)="changeText('phoneicon')"><i class="icon_sp fas fa-phone fa-3x"[ngClass]="{'my-class': phoneicon}"></i></span>
+      <span (mouseover)="changeText('lockicon')"><i class="icon_sp fas fa-unlock-alt fa-3x"[ngClass]="{'my-class': lockicon}"></i></span>
+    </div>
+   
+     <hr>
+    <!-- <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p> -->
+  </mat-card-content>
+  <mat-card-actions>
+    <button (click)="voteUser()" class="vote_button" mat-raised-button color="primary"><span class="vote_text">VOTE</span></button>
+   
+  </mat-card-actions>
+</mat-card>
+</div>

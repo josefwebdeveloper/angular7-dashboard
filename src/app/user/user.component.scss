@@ -1,0 +1,90 @@
+
+
+
+::ng-deep .mat-card-header-text {
+    /* CSS styles go here */
+    margin: 0px !important; // for example to remove the margin
+  }
+.image-wrapper{
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+margin: 0 auto;
+margin-top:20px;
+margin-bottom: 36px;
+   
+    .image-contact{
+        width: 150px;
+        height: auto;
+        border-radius: 50%;
+    }
+}
+
+
+.wrapper{
+    // width: 100%;
+    // height: 100%;
+}
+
+
+.example-card {
+   
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top:120px;
+ }
+ mat-card-actions{
+     display: flex;
+     justify-content:center;
+ }
+.vote_button{
+    
+    width: 160px;
+    // height: 100px;
+    // background: #8734f7;
+    // width: 50px !important;
+    -webkit-transform: skew(-15deg);
+    -moz-transform: skew(-15deg);
+    -o-transform: skew(-15deg);
+    transform: skew(-15deg);
+}
+.wrapper-icons{
+    display: flex;
+    justify-content: space-around;
+}
+.icon_sp{
+    // height:  20px;
+
+}
+.center{
+    margin: 0 auto;
+    text-align: center;
+    color: #999;
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+.center-main{
+    margin: 0 auto;
+    text-align: center;
+    // color: #999;
+    font-size: 1.8rem;
+    margin-bottom: 35px;
+}
+.icon_sp:hover{
+    opacity: .12;
+}
+.my-class {
+    opacity: .12;
+}
+.vote_text{
+    // -webkit-transform: skew(30deg);
+    // -moz-transform: skew(30deg);
+    // -o-transform: skew(30deg);
+    // transform: none !important;
+}
+
+.example-header-image {
+    // background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+ }
+  
