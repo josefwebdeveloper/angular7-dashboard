@@ -14,6 +14,8 @@ import { StartComponent } from './start/start.component';
 import { DataService } from './data.service';
 import {MatCardModule} from '@angular/material/card';
 import {MatBadgeModule} from '@angular/material/badge';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatListModule,
     HttpClientModule,
     MatCardModule,
-    MatBadgeModule
+    MatBadgeModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [ApiService,DataService],
   bootstrap: [AppComponent]
